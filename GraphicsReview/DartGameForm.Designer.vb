@@ -28,12 +28,14 @@ Partial Class DartGameForm
         Me.DartBoardPictureBox = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.CoordsStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.RoundLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.RoundNumberLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ThrowButton = New System.Windows.Forms.Button()
         Me.RoundButton = New System.Windows.Forms.Button()
         Me.ReviewButton = New System.Windows.Forms.Button()
-        Me.RoundLabel = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.RoundNumberLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ReviewRoundComboBox = New System.Windows.Forms.ComboBox()
+        Me.DartLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.DartNumberLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ButtonGroupBox.SuspendLayout()
         CType(Me.DartBoardPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
@@ -84,7 +86,7 @@ Partial Class DartGameForm
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CoordsStatusLabel, Me.RoundLabel, Me.RoundNumberLabel})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CoordsStatusLabel, Me.RoundLabel, Me.RoundNumberLabel, Me.DartLabel, Me.DartNumberLabel})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 427)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(800, 26)
@@ -96,6 +98,18 @@ Partial Class DartGameForm
         Me.CoordsStatusLabel.Name = "CoordsStatusLabel"
         Me.CoordsStatusLabel.Size = New System.Drawing.Size(70, 20)
         Me.CoordsStatusLabel.Text = "MouseXY"
+        '
+        'RoundLabel
+        '
+        Me.RoundLabel.Name = "RoundLabel"
+        Me.RoundLabel.Size = New System.Drawing.Size(55, 20)
+        Me.RoundLabel.Text = "Round:"
+        '
+        'RoundNumberLabel
+        '
+        Me.RoundNumberLabel.Name = "RoundNumberLabel"
+        Me.RoundNumberLabel.Size = New System.Drawing.Size(17, 20)
+        Me.RoundNumberLabel.Text = "0"
         '
         'ThrowButton
         '
@@ -124,18 +138,6 @@ Partial Class DartGameForm
         Me.ReviewButton.Text = "Review"
         Me.ReviewButton.UseVisualStyleBackColor = True
         '
-        'RoundLabel
-        '
-        Me.RoundLabel.Name = "RoundLabel"
-        Me.RoundLabel.Size = New System.Drawing.Size(55, 20)
-        Me.RoundLabel.Text = "Round:"
-        '
-        'RoundNumberLabel
-        '
-        Me.RoundNumberLabel.Name = "RoundNumberLabel"
-        Me.RoundNumberLabel.Size = New System.Drawing.Size(17, 20)
-        Me.RoundNumberLabel.Text = "0"
-        '
         'ReviewRoundComboBox
         '
         Me.ReviewRoundComboBox.FormattingEnabled = True
@@ -143,6 +145,18 @@ Partial Class DartGameForm
         Me.ReviewRoundComboBox.Name = "ReviewRoundComboBox"
         Me.ReviewRoundComboBox.Size = New System.Drawing.Size(106, 24)
         Me.ReviewRoundComboBox.TabIndex = 4
+        '
+        'DartLabel
+        '
+        Me.DartLabel.Name = "DartLabel"
+        Me.DartLabel.Size = New System.Drawing.Size(41, 20)
+        Me.DartLabel.Text = "Dart:"
+        '
+        'DartNumberLabel
+        '
+        Me.DartNumberLabel.Name = "DartNumberLabel"
+        Me.DartNumberLabel.Size = New System.Drawing.Size(17, 20)
+        Me.DartNumberLabel.Text = "0"
         '
         'DartGameForm
         '
@@ -182,4 +196,6 @@ Partial Class DartGameForm
     Friend WithEvents RoundLabel As ToolStripStatusLabel
     Friend WithEvents RoundNumberLabel As ToolStripStatusLabel
     Friend WithEvents ReviewRoundComboBox As ComboBox
+    Friend WithEvents DartLabel As ToolStripStatusLabel
+    Friend WithEvents DartNumberLabel As ToolStripStatusLabel
 End Class
